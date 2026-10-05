@@ -1,0 +1,15 @@
+{
+  "schema_version":"1.0","project_id":"P03","source":null,
+  "base_args":{"standard":"ax","bandGHz":5.0,"channelWidthMHz":20,"nSta":10,"distanceM":8,"referenceLossDb":"$FRIIS_5","txPowerDbm":18,"offeredLoadMbpsPerSta":2,"packetSize":1200,"simulationTimeS":10,"topology":"ring","apPlacement":"center","rateManager":"ideal","dataMode":"HeMcs4"},
+  "runs":[1,2,3,4,5],
+  "cases":[
+    {"scenario_id":"rts-0-P0","args":{"enableRts":0,"modelLabel":"P0-textbook","pathLossExponent":"$N_TEXTBOOK"}},
+    {"scenario_id":"rts-0-P1","args":{"enableRts":0,"modelLabel":"P1-calibrated","pathLossExponent":"$N_MEDIAN"}},
+    {"scenario_id":"rts-1-P0","args":{"enableRts":1,"modelLabel":"P0-textbook","pathLossExponent":"$N_TEXTBOOK"}},
+    {"scenario_id":"rts-1-P1","args":{"enableRts":1,"modelLabel":"P1-calibrated","pathLossExponent":"$N_MEDIAN"}}
+  ],
+  "notes":"Uses a specialized hidden-node geometry; core uses 5 runs per case.",
+  "runner":"specialized",
+  "upstream_example":"examples/wireless/wifi-simple-ht-hidden-stations.cc",
+  "starter_guide":"docs/ADVANCED_STARTERS.md"
+}

@@ -1,0 +1,2 @@
+unit_id,session_id,device_id,bssid,band_ghz,distance_m,sample,rssi_dbm,notes
+G01,S1,DEVICE,AA:BB:CC:DD:EE:FF,5.0,1,1,,

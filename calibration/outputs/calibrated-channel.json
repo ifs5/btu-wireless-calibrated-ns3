@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "band_ghz": 5.0,
+  "reference_distance_m": 1.0,
+  "reference_loss_db": 46.427183,
+  "reference_loss_method": "Friis at 1 m; measured RSSI intercept is NOT assumed to equal path loss",
+  "n_textbook": 2.0,
+  "n_median": 2.09485,
+  "n_q1": 2.058471,
+  "n_q3": 2.131229,
+  "n_iqr": 0.072758,
+  "unit_count": 2,
+  "aggregation": "median of per-unit log-distance exponent estimates"
+}

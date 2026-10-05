@@ -1,0 +1,18 @@
+{
+  "schema_version":"1.0","project_id":"P04","source":"btu-calibrated-wifi.cc",
+  "base_args":{"standard":"ax","bandGHz":5.0,"channelWidthMHz":20,"nSta":10,"distanceM":8,"referenceLossDb":"$FRIIS_5","txPowerDbm":18,"offeredLoadMbpsPerSta":2,"packetSize":1200,"simulationTimeS":10,"topology":"ring","apPlacement":"center","rateManager":"ideal","dataMode":"HeMcs4"},
+  "runs":[1,2,3,4,5],
+  "cases":[
+    {"scenario_id":"packetSize-200-P0","args":{"packetSize":200,"modelLabel":"P0-textbook","pathLossExponent":"$N_TEXTBOOK"}},
+    {"scenario_id":"packetSize-200-P1","args":{"packetSize":200,"modelLabel":"P1-calibrated","pathLossExponent":"$N_MEDIAN"}},
+    {"scenario_id":"packetSize-500-P0","args":{"packetSize":500,"modelLabel":"P0-textbook","pathLossExponent":"$N_TEXTBOOK"}},
+    {"scenario_id":"packetSize-500-P1","args":{"packetSize":500,"modelLabel":"P1-calibrated","pathLossExponent":"$N_MEDIAN"}},
+    {"scenario_id":"packetSize-800-P0","args":{"packetSize":800,"modelLabel":"P0-textbook","pathLossExponent":"$N_TEXTBOOK"}},
+    {"scenario_id":"packetSize-800-P1","args":{"packetSize":800,"modelLabel":"P1-calibrated","pathLossExponent":"$N_MEDIAN"}},
+    {"scenario_id":"packetSize-1200-P0","args":{"packetSize":1200,"modelLabel":"P0-textbook","pathLossExponent":"$N_TEXTBOOK"}},
+    {"scenario_id":"packetSize-1200-P1","args":{"packetSize":1200,"modelLabel":"P1-calibrated","pathLossExponent":"$N_MEDIAN"}},
+    {"scenario_id":"packetSize-1472-P0","args":{"packetSize":1472,"modelLabel":"P0-textbook","pathLossExponent":"$N_TEXTBOOK"}},
+    {"scenario_id":"packetSize-1472-P1","args":{"packetSize":1472,"modelLabel":"P1-calibrated","pathLossExponent":"$N_MEDIAN"}}
+  ],
+  "notes":"","runner":"common"
+}

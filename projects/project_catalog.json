@@ -1,0 +1,296 @@
+[
+  {
+    "id": "P01",
+    "title": "İstemci Yoğunluğu ve WLAN Doyumu",
+    "family": "MAC / Contention",
+    "tier": "Standard",
+    "rq": "Kalibre edilmiş iç mekân kanalında bağlı istasyon sayısı arttıkça aggregate throughput, delay, PDR ve fairness nasıl değişir?",
+    "variable": "nSta",
+    "values": [
+      5,
+      10,
+      20,
+      30,
+      40
+    ],
+    "metrics": "aggregate throughput; mean delay; PDR; Jain fairness",
+    "starter": "common",
+    "core_runs": 50,
+    "extension": "İki offered-load seviyesi ekleyerek saturation boundary’yi belirleyin.",
+    "publication": "Propagation calibration’a karşı yoğunluk duyarlılığı."
+  },
+  {
+    "id": "P02",
+    "title": "Offered Load ve Doyum Eşiği",
+    "family": "MAC / Traffic",
+    "tier": "Standard",
+    "rq": "Bir Wi-Fi hücresi hangi offered load seviyesinde unsaturated durumdan saturated duruma geçer ve propagation calibration bu sınırı değiştirir mi?",
+    "variable": "offeredLoadMbpsPerSta",
+    "values": [
+      0.5,
+      1,
+      2,
+      4,
+      8
+    ],
+    "metrics": "throughput; delay; PDR; fairness",
+    "starter": "common",
+    "core_runs": 50,
+    "extension": "Knee point’i algoritmik olarak tahmin edip P0/P1’i karşılaştırın.",
+    "publication": "Saturation-boundary duyarlılığı."
+  },
+  {
+    "id": "P03",
+    "title": "Hidden Terminal ve RTS/CTS",
+    "family": "MAC / Contention",
+    "tier": "Intermediate",
+    "rq": "Textbook ve calibrated propagation altında hidden-terminal geometrisinde RTS/CTS hangi koşullarda performansı iyileştirir?",
+    "variable": "enableRts",
+    "values": [
+      0,
+      1
+    ],
+    "metrics": "throughput; delay; PDR; retransmission/collision proxy",
+    "starter": "special-p03",
+    "core_runs": 20,
+    "extension": "RTS threshold veya hidden-node attenuation için ek sweep yapın.",
+    "publication": "RTS/CTS sonucunun channel calibration’a karşı robustness’u."
+  },
+  {
+    "id": "P04",
+    "title": "Paket Boyutu ve MAC Verimliliği",
+    "family": "MAC / Traffic",
+    "tier": "Standard",
+    "rq": "Aynı offered load altında application packet size WLAN verimliliğini ve güvenilirliğini nasıl etkiler?",
+    "variable": "packetSize",
+    "values": [
+      200,
+      500,
+      800,
+      1200,
+      1472
+    ],
+    "metrics": "throughput; delay; PDR; fairness",
+    "starter": "common",
+    "core_runs": 50,
+    "extension": "İkinci bir load seviyesinde deneyi tekrarlayın.",
+    "publication": "Calibrated channel altında packet-size etkisi."
+  },
+  {
+    "id": "P05",
+    "title": "Kalibrasyon Gerçekten Fark Yaratıyor mu?",
+    "family": "Propagation / Validation",
+    "tier": "Intermediate",
+    "rq": "Measurement-calibrated log-distance model, textbook n=2 modele göre tahmin edilen received-performance trendlerini ne ölçüde değiştirir?",
+    "variable": "propagation model",
+    "values": [
+      "P0",
+      "P1",
+      "P2",
+      "P3"
+    ],
+    "metrics": "RSSI/received-power trend where available; throughput; PDR; delay; model sensitivity",
+    "starter": "common",
+    "core_runs": 80,
+    "extension": "Hold-out measurements ile RMSE validation ekleyin.",
+    "publication": "Calibration/validation makalesinin temel work package’ı."
+  },
+  {
+    "id": "P06",
+    "title": "Mesafe ve Ağ Performansı",
+    "family": "Propagation / Coverage",
+    "tier": "Standard",
+    "rq": "AP–client mesafesindeki artış, path loss üzerinden throughput, delay ve PDR’a nasıl yansır?",
+    "variable": "distanceM",
+    "values": [
+      2,
+      5,
+      10,
+      15,
+      20
+    ],
+    "metrics": "throughput; delay; PDR; fairness",
+    "starter": "common",
+    "core_runs": 50,
+    "extension": "Kritik mesafelerde P2/P3 uncertainty bounds ekleyin.",
+    "publication": "Coverage boundary duyarlılığı."
+  },
+  {
+    "id": "P07",
+    "title": "Transmit Power, Coverage ve Verimlilik",
+    "family": "Propagation / Coverage",
+    "tier": "Standard",
+    "rq": "Transmit power, calibrated channel altında kullanılabilir coverage bölgesini ve performansı nasıl değiştirir?",
+    "variable": "txPowerDbm",
+    "values": [
+      8,
+      11,
+      14,
+      17,
+      20
+    ],
+    "metrics": "throughput; PDR; delay; coverage threshold",
+    "starter": "common",
+    "core_runs": 50,
+    "extension": "Performansı transmit power’a normalize edip energy trade-off’u tartışın.",
+    "publication": "Calibration altında Tx-power duyarlılığı."
+  },
+  {
+    "id": "P08",
+    "title": "Küçük İç Mekânda AP Yerleşimi",
+    "family": "Topology / Planning",
+    "tier": "Intermediate",
+    "rq": "Sabit client layout için calibrated propagation altında hangi AP placement throughput/fairness açısından daha iyi sonuç verir?",
+    "variable": "apPlacement",
+    "values": [
+      "center",
+      "edge",
+      "corner"
+    ],
+    "metrics": "aggregate throughput; per-client throughput; PDR; Jain fairness",
+    "starter": "common-room",
+    "core_runs": 30,
+    "extension": "İkinci bir client-density pattern ekleyin.",
+    "publication": "Planning sonucunun calibration’a duyarlılığı."
+  },
+  {
+    "id": "P09",
+    "title": "Ölçüm-Temelli Propagation ile 2.4 GHz vs 5 GHz",
+    "family": "PHY / Propagation",
+    "tier": "Intermediate",
+    "rq": "Frequency-dependent 1 m reference loss ve measurement-informed distance exponent tutarlı ele alındığında 2.4 ve 5 GHz nasıl karşılaştırılır?",
+    "variable": "bandGHz",
+    "values": [
+      2.4,
+      5
+    ],
+    "metrics": "throughput; PDR; delay; coverage trend",
+    "starter": "common",
+    "core_runs": 40,
+    "extension": "Kontrollü bir 2.4-GHz reference dataset toplayıp ayrıca fit edin.",
+    "publication": "Cross-band calibration metodolojisi."
+  },
+  {
+    "id": "P10",
+    "title": "Channel Width Trade-off",
+    "family": "PHY / Configuration",
+    "tier": "Intermediate",
+    "rq": "Channel width 20 MHz’den 40/80 MHz’e çıkarıldığında ne zaman throughput artar ve ne zaman channel quality avantajı sınırlar?",
+    "variable": "channelWidthMHz",
+    "values": [
+      20,
+      40,
+      80
+    ],
+    "metrics": "throughput; delay; PDR; fairness",
+    "starter": "common",
+    "core_runs": 30,
+    "extension": "Near ve edge-of-coverage mesafelerinde tekrar edin.",
+    "publication": "Bandwidth/channel-quality etkileşimi."
+  },
+  {
+    "id": "P11",
+    "title": "Rate Adaptation vs Sabit MCS",
+    "family": "PHY / Configuration",
+    "tier": "Intermediate",
+    "rq": "Propagation kötüleştikçe adaptive rate selection, fixed MCS seçeneklerine göre ne kadar robust davranır?",
+    "variable": "rateManager / dataMode",
+    "values": [
+      "ideal",
+      "fixed-low",
+      "fixed-mid",
+      "fixed-high"
+    ],
+    "metrics": "throughput; PDR; delay",
+    "starter": "common",
+    "core_runs": 40,
+    "extension": "Her fixed mode’un viable olmaktan çıktığı mesafeyi belirleyin.",
+    "publication": "Rate-selection robustness’unun calibration’a duyarlılığı."
+  },
+  {
+    "id": "P12",
+    "title": "İki WLAN Arasında Co-channel Interference",
+    "family": "Interference / Topology",
+    "tier": "Advanced",
+    "rq": "Komşu same-channel BSS, separated-channel baseline’a göre performansı ne kadar düşürür ve calibration bu sonucu değiştirir mi?",
+    "variable": "channel plan",
+    "values": [
+      "same-channel",
+      "separate-channel"
+    ],
+    "metrics": "per-BSS throughput; delay; PDR; fairness",
+    "starter": "special-p12",
+    "core_runs": 20,
+    "extension": "BSS separation veya asymmetric load sweep yapın.",
+    "publication": "Co-channel sonucunun calibration’a duyarlılığı."
+  },
+  {
+    "id": "P13",
+    "title": "Yoğun Yükte Wi-Fi 5 vs Wi-Fi 6",
+    "family": "Modern Wi-Fi",
+    "tier": "Intermediate",
+    "rq": "Aynı topology ve traffic altında client density arttıkça 802.11ac ve 802.11ax nasıl karşılaştırılır?",
+    "variable": "standard",
+    "values": [
+      "ac",
+      "ax"
+    ],
+    "metrics": "throughput; delay; PDR; fairness",
+    "starter": "common",
+    "core_runs": 40,
+    "extension": "İkinci bir channel width veya traffic profile ekleyin.",
+    "publication": "Standard comparison sonucunun calibrated propagation’a duyarlılığı."
+  },
+  {
+    "id": "P14",
+    "title": "Karma Trafikte EDCA / QoS",
+    "family": "QoS",
+    "tier": "Advanced",
+    "rq": "Best-effort traffic aynı calibrated WLAN için rekabet ederken EDCA delay-sensitive trafiği ne ölçüde korur?",
+    "variable": "traffic mix / access category",
+    "values": [
+      "light-BE",
+      "heavy-BE"
+    ],
+    "metrics": "per-class throughput; per-class delay; PDR",
+    "starter": "special-p14",
+    "core_runs": 20,
+    "extension": "Bir EDCA parametresini değiştirip mühendislik gerekçesini açıklayın.",
+    "publication": "Channel calibration altında QoS robustness."
+  },
+  {
+    "id": "P15",
+    "title": "Yoğun 802.11ax Ortamında OFDMA",
+    "family": "Modern Wi-Fi",
+    "tier": "Advanced",
+    "rq": "Aynı propagation koşullarında OFDMA hangi client-density düzeylerinde single-user scheduling’e göre avantaj sağlar?",
+    "variable": "OFDMA",
+    "values": [
+      "off",
+      "on"
+    ],
+    "metrics": "aggregate/per-user throughput; delay; fairness",
+    "starter": "special-p15",
+    "core_runs": 20,
+    "extension": "UL OFDMA veya BSRP’yi ikinci factor olarak ekleyin.",
+    "publication": "OFDMA faydasının channel calibration’a duyarlılığı."
+  },
+  {
+    "id": "P16",
+    "title": "Kalibre Coverage Gradient Boyunca Mobility",
+    "family": "Mobility / Propagation",
+    "tier": "Intermediate",
+    "rq": "Hareketli bir station calibrated coverage gradient boyunca ilerlerken performansı nasıl değişir?",
+    "variable": "mobilitySpeedMps",
+    "values": [
+      0.5,
+      1,
+      1.5
+    ],
+    "metrics": "throughput; PDR; delay over run; outage/edge behavior",
+    "starter": "common-mobility",
+    "core_runs": 30,
+    "extension": "İkinci bir trajectory veya P2/P3 uncertainty ekleyin.",
+    "publication": "Mobility/outage duyarlılığının calibration’a etkisi."
+  }
+]

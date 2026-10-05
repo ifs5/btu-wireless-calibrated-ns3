@@ -1,0 +1,20 @@
+# Local ns-3 trees / build output
+ns-3.48/
+build/
+cmake-cache/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Student raw experiment output should normally stay in private project repos
+results/*.csv
+results/*.json
+results/*.png
+!results/.gitkeep
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
