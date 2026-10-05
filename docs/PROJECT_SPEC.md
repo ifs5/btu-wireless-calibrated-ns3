@@ -41,7 +41,23 @@ Her proje aşağıdakileri içermelidir:
 
 Zorluk **otomatik puanla değil, core scope ile** dengelenir. Standard projelerin deney matrisi daha geniştir. Advanced projelerin core matrisi daha küçüktür ve daha güçlü starter desteği vardır.
 
-Zor bir projeyi seçmek otomatik bonus sağlamaz. Core çalışma eksiksiz ve reproducible hale geldikten sonra yapılan gerçek bir **Advanced Extension** için **+0…5 proje puanı** verilebilir.
+Zor bir projeyi seçmek otomatik bonus sağlamaz. Core çalışma eksiksiz ve reproducible hale geldikten sonra yapılan gerçek bir **Advanced Extension** için **+0…5 proje puanı** verilebilir. Bonus, proje bileşeninin ders başarı notuna katkısını **30 puanın üzerine çıkarmaz**.
+
+## Notlandırma
+
+Proje 100 puan üzerinden değerlendirilir ve ders notuna %30 ağırlıkla yansıtılır.
+
+| Bileşen | Puan |
+|---|---:|
+| Proposal ve kapsamın netliği | 5 |
+| Düzenli checkpoint / ilerleme kanıtı | 5 |
+| Ölçüm kalibrasyonu ve P0-P1 doğrulaması | 15 |
+| Teknik implementasyon / doğru ns-3 modeli | 20 |
+| Deney tasarımı ve reproducibility | 20 |
+| Nicel analiz ve istatistik | 15 |
+| Teknik yorum, limitations ve genellenebilirlik | 10 |
+| Final sunum ve Q&A | 10 |
+| **Toplam** | **100** |
 
 ## Öğrenci geliştirme akışı
 
@@ -49,10 +65,12 @@ Instructor starter repository public'tir. Öğrenci geliştirme repoları gradin
 
 Ayrıntılı repo kullanımı: [`REPO_KULLANIMI.md`](REPO_KULLANIMI.md)
 
-İlgili dosyalar:
+## Öğrenci belgeleri ve ilgili dosyalar
 
+- [`PROPOSAL_TEMPLATE.md`](PROPOSAL_TEMPLATE.md)
+- [`AI_POLICY.md`](AI_POLICY.md)
+- [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md)
+- [`PROJECT_SCHEDULE.md`](PROJECT_SCHEDULE.md)
+- [`PROJECT_CATALOG.md`](PROJECT_CATALOG.md)
 - `projects/project_catalog.csv`
 - `projects/Pxx/README.md`
-- `docs/AI_POLICY.md`
-- `docs/REPRODUCIBILITY.md`
-- `docs/PROJECT_SCHEDULE.md`
