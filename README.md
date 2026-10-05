@@ -100,6 +100,13 @@ Bu **public instructor repository** şunları içerir:
 
 Öğrenci grupları geliştirmelerini **grading tamamlanana kadar private repository** üzerinde yapmalıdır. Public repodan starter sürümü alınır; öğrenci repo'sunda kendi kodu, `AI_USAGE.md`, raw results ve analysis dosyaları tutulur. Ayrıntılı akış: [`docs/REPO_KULLANIMI.md`](docs/REPO_KULLANIMI.md).
 
+## Öğrenci belgeleri
+
+- Proje şartnamesi: [`docs/PROJECT_SPEC.md`](docs/PROJECT_SPEC.md)
+- Proposal şablonu: [`docs/PROPOSAL_TEMPLATE.md`](docs/PROPOSAL_TEMPLATE.md)
+- AI/LLM politikası: [`docs/AI_POLICY.md`](docs/AI_POLICY.md)
+- Repo kullanım kılavuzu: [`docs/REPO_KULLANIMI.md`](docs/REPO_KULLANIMI.md)
+
 ## AI / LLM kullanımı
 
 AI araçları yasak değildir. İlke:
