@@ -20,7 +20,17 @@
 
 Nihai atama, sınıf genelinde yük/zorluk dengesi gözetilerek eğitmen tarafından yapılır.
 
-## C. Week 2-3 ölçüm audit'i
+## C. Eski laboratuvar ölçüm kaynağı (proje grubunun kendi n değeri değildir)
+
+Eski ölçümler 5 kişilik **L01–L06** gruplarına aittir; yeni iki kişilik proje grubu eski veri dosyasını bağımsız yeni ölçüm diye çoğaltmaz. Kendi n değerinizi P1 olarak seçmeyin. P1/P2/P3 eğitmenin Week 6'da yayımladığı sınıf sürümünden alınır.
+
+- Eski laboratuvar grubu kodu (L01–L06):
+- 3. hafta LOS ölçüm dosyası:
+- Ölçüm bandı/BSSID/rota (biliniyorsa):
+- RSSI dBm var mı; mesafe/tekrar sayısı:
+- Bilinen eksik/kalite problemi:
+
+## C1. Önceki formdan ek denetim alanları
 
 - Kullanılacak measurement dosyası:
 - Ölçüm ortamı / yaklaşık konum:
@@ -40,6 +50,8 @@ Nihai atama, sınıf genelinde yük/zorluk dengesi gözetilerek eğitmen tarafı
 
 ## E. Deney tasarımı
 
+P05 seçilirse P0/P1/P2/P3 core zorunludur. Diğer projelerde P0/P1 zorunludur. Core run sayısını public repo'daki atanmış matrix belirler.
+
 - Birincil independent variable:
 - Zorunlu P0/P1 karşılaştırması: P0 textbook ve P1 class-calibrated
 - Sabit tutulacak değişkenler:
@@ -52,8 +64,8 @@ Nihai atama, sınıf genelinde yük/zorluk dengesi gözetilerek eğitmen tarafı
 
 ## F. Calibration ve validation planı
 
-1. Kendi Week 2-3 ölçümünüz sınıf kalibrasyonuna hangi veri ile katkı sağlayacak?
-2. P0 ve P1 sonucu arasında ne tür bir fark bekliyorsunuz?
+1. Eski L-grubunuzun 3. hafta LOS ölçüm kaynağı nedir? Varsa eksiklerini belirtin.
+2. P0 (n=2) ve eğitmen tarafından duyurulacak P1 (sınıf medyanı) arasında ne tür bir fark bekliyorsunuz?
 3. Calibration sonucunun network-level conclusion'ı değiştirmediği bir sonuç da bilimsel olarak neden anlamlı olabilir?
 
 ## G. Reproducibility planı
