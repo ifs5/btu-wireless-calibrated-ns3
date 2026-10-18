@@ -15,7 +15,7 @@ python3 scripts/run_matrix.py \
   --dry-run
 ```
 
-4. Matrix ve calibration dosyasını kontrol ettikten sonra `--dry-run` seçeneğini kaldırın.
+4. **Tek başına `--dry-run` seçeneğini kaldırmayın.** Eğitmen tarafından yayımlanmış gerçek `class_calibration_v1.json`, onay SHA-256 kilidi ve derleme/smoke-test onayı gerekir. Gerçek koşuda `--calibration calibration/outputs/class_calibration_v1.json` ekleyin. Ayrıntılar: [`docs/RUNNER_KULLANIMI.md`](../docs/RUNNER_KULLANIMI.md).
 5. P03/P12/P14/P15 specialized projeleri `docs/ADVANCED_STARTERS.md` akışını izler ve single-AP common engine yerine belirtilen resmî ns-3.48 örneğinden başlar.
 
 ## Reproducibility kuralı
