@@ -2,6 +2,12 @@
 
 Bu doküman public instructor repo ile öğrenci grubunun private development repo'sunun nasıl birlikte kullanılacağını açıklar.
 
+## 0. Sınıfın ortak kalibrasyon akışı
+
+Önce eski beş kişilik altı laboratuvar grubunun (L01–L06) **3. hafta LOS dBm–mesafe** ham verileri denetlenir. Aynı 5 GHz AP/BSSID ve ölçüm rotasında en az dört geçerli set bulunursa her eski grup için bir `n`, ardından sınıf medyanı/Q1/Q3 hesaplanır. Yoksa eski ekipler 5. hafta ortak standart ölçümü tekrarlar. İki kişilik yeni proje grupları bu eski ölçümleri yeniden saymaz.
+
+6. haftada ilan edilecek `class_calibration_v1` kullanılmalıdır. Depodaki mevcut `calibration/outputs/calibrated-channel.json` sentetik örnek olduğundan **dersin core sonuçları için kullanılmaz**. Eğitmenin ns-3.48 starter compile/smoke-test onayı ve gerçek kalibrasyon sürümü olmadan tam çalıştırma kampanyasına geçmeyin.
+
 ## 1. Public repo'nun rolü
 
 Bu repo **tek doğruluk kaynağıdır (authoritative starter source)**:
