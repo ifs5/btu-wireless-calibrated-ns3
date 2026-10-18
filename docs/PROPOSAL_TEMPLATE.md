@@ -1,116 +1,77 @@
-# Dönem Projesi Öneri Formu
+# Proje Tercih ve Hazırlık Formu — 2026–2027 (v3.0)
 
-**Week 5 teslimi.** Bu form final rapor değildir; research question, measurement audit, deney planı ve uygulanabilirliği erkenden netleştirmek için kullanılır.
+**Teslim: 5. hafta | Her iki kişilik proje grubu için tek form.**
 
-## A. Grup bilgileri
+> Bu bir serbest proje önerisi değildir. Araştırma sorusu, bağımsız/sabit değişkenler, senaryo seviyeleri, metrikler ve zorunlu deney matrisi **eğitmen tarafından belirlenmiş 16 Pxx konusunun içinde hazırdır.** Burada öğrencilerden yeniden bir araştırma tasarlamaları, hipotez yazmaları, `n` hesaplamaları veya simülasyon koşusu planlamaları istenmiyor. Teknik öngörü, proje atamasından sonra 7. haftada değerlendirilecektir.
 
-- Grup adı / kodu:
-- Öğrenci 1 - Ad Soyad / No:
-- Öğrenci 2 - Ad Soyad / No:
-- Private GitHub repo adı:
-- Public starter commit/tag:
+## A. İkili proje grubu
 
-## B. Proje tercihleri
-
-| Tercih | Project ID | Proje adı | Kısa gerekçe |
-|---|---|---|---|
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-
-Nihai atama, sınıf genelinde yük/zorluk dengesi gözetilerek eğitmen tarafından yapılır.
-
-## C. Eski laboratuvar ölçüm kaynağı (proje grubunun kendi n değeri değildir)
-
-Eski ölçümler 5 kişilik **L01–L06** gruplarına aittir; yeni iki kişilik proje grubu eski veri dosyasını bağımsız yeni ölçüm diye çoğaltmaz. Kendi n değerinizi P1 olarak seçmeyin. P1/P2/P3 eğitmenin Week 6'da yayımladığı sınıf sürümünden alınır.
-
-- Eski laboratuvar grubu kodu (L01–L06):
-- 3. hafta LOS ölçüm dosyası:
-- Ölçüm bandı/BSSID/rota (biliniyorsa):
-- RSSI dBm var mı; mesafe/tekrar sayısı:
-- Bilinen eksik/kalite problemi:
-
-## C1. Önceki formdan ek denetim alanları
-
-- Kullanılacak measurement dosyası:
-- Ölçüm ortamı / yaklaşık konum:
-- Band ve BSSID tutarlılığı:
-- Kullanılan cihaz(lar):
-- Mesafe noktaları ve tekrar sayısı:
-- Eksik/şüpheli veri var mı?
-- İlk `n` tahmini varsa:
-
-> **Not:** Measurement intercept `A`, doğrudan ns-3 `ReferenceLoss` değildir. Ortak pipeline ölçümden `n` değerini kullanır; `ReferenceLoss` frekansa uygun 1 m Friis değeri ile tanımlanır.
-
-## D. Araştırma sorusu ve hipotez
-
-- Research question:
-- Test edilebilir hipotez:
-- Neden önemli?
-
-## E. Deney tasarımı
-
-P05 seçilirse P0/P1/P2/P3 core zorunludur. Diğer projelerde P0/P1 zorunludur. Core run sayısını public repo'daki atanmış matrix belirler.
-
-- Birincil independent variable:
-- Zorunlu P0/P1 karşılaştırması: P0 textbook ve P1 class-calibrated
-- Sabit tutulacak değişkenler:
-- Primary KPI:
-- Diğer metric'ler:
-- Core case sayısı:
-- Her case için run sayısı:
-- Tahmini toplam core run:
-- Optional extension fikri (zorunlu değil):
-
-## F. Calibration ve validation planı
-
-1. Eski L-grubunuzun 3. hafta LOS ölçüm kaynağı nedir? Varsa eksiklerini belirtin.
-2. P0 (n=2) ve eğitmen tarafından duyurulacak P1 (sınıf medyanı) arasında ne tür bir fark bekliyorsunuz?
-3. Calibration sonucunun network-level conclusion'ı değiştirmediği bir sonuç da bilimsel olarak neden anlamlı olabilir?
-
-## G. Reproducibility planı
-
-- [ ] ns-3.48 kullanılacak.
-- [ ] Starter commit/tag private repo'da kaydedilecek.
-- [ ] Frozen matrix korunacak.
-- [ ] Raw CSV dosyaları elle değiştirilmeden saklanacak.
-- [ ] Figure üretme script/notebook'u saklanacak.
-- [ ] `AI_USAGE.md` tutulacak.
-
-## H. İş bölümü
-
-| Görev | Öğrenci 1 | Öğrenci 2 | Ortak |
-|---|---|---|---|
-| Measurement audit / calibration |  |  |  |
-| ns-3 kodu / config |  |  |  |
-| Deney campaign |  |  |  |
-| Data analysis / plotting |  |  |  |
-| Rapor |  |  |  |
-| Sunum / Q&A hazırlığı |  |  |  |
-
-İki öğrenci de projenin tamamını temel düzeyde açıklayabilmelidir.
-
-## I. AI / LLM kullanım planı
-
-| Planlanan kullanım | Araç / amaç | Nasıl doğrulanacak? |
+| Bilgi | Öğrenci 1 | Öğrenci 2 |
 |---|---|---|
-| Kod/API yardımı |  |  |
-| Debugging |  |  |
-| Analiz / plotting |  |  |
-| Yazım / dil |  |  |
-| Diğer |  |  |
+| Ad soyad | | |
+| Öğrenci numarası | | |
+| Eski 5 kişilik laboratuvar grubu (L01–L06) | | |
 
-Önemli kullanım private repo'daki `AI_USAGE.md` dosyasında ayrıca kaydedilir.
+30 kişilik sınıfta 15 ikili grup oluşur; 32 kişi kesinleşirse 16 ikili grup oluşur. Toplam 16 farklı Pxx konusu bir havuzdur.
 
-## J. Riskler ve ihtiyaç duyulan destek
+## B. Üç farklı proje tercihi
 
-- En büyük teknik risk:
-- İhtiyaç duyulan yazılım / ortam / veri:
-- Eğitmenden beklenen onay / yardım:
+Şartnamedeki proje açıklamalarını ve Excel matrisini okuyarak öncelik sırasıyla üç konu seçin.
 
-## K. Eğitmen onayı
+| Öncelik | Proje kodu | Projenin kısa adı (isteğe bağlı) |
+|---|---|---|
+| 1 | | |
+| 2 | | |
+| 3 | | |
 
-- Atanan proje ID:
-- Scope düzeltmesi:
-- Core matrix değişikliği gerekiyorsa:
-- Onay / tarih:
+**Birinci tercih için bir cümlelik gerekçe:**
+
+..................................................................................
+
+> Tercih, kesin atama anlamına gelmez. Eğitmen öğrenci sayısını ve proje iş yükünü dikkate alarak atama yapar.
+
+## C. Eski laboratuvar ölçümü — yalnız kaynak bilgisi
+
+Week 3 LOS RSSI–mesafe ölçümleri **eski L01–L06 ekiplerine aittir.** Her eski beş kişilik grup tek bir ölçüm setidir; iki kişilik gruplara geçildiğinde veri setlerinin sayısı artmış sayılmaz. Eski laboratuvar grup kodları Bölüm A'da yalnız bir kez belirtilmiştir.
+
+- **3. hafta LOS veri dosyasının adı/bağlantısı (biliyorsanız):**
+- **Bilinen veri sorunu var mı?** Yok / Var / Bilmiyoruz
+- **Varsa kısaca açıklayın:**
+
+Eski altı ölçüm dosyası **eğitmen tarafından birer kez** toplanıp denetlenir. Geçerli ölçümlerden ortak P1=medyan, P2=Q1 ve P3=Q3 oluşturulur. **Bu formda** veri dosyası yüklemeniz, (n), P1/P2/P3 hesaplamanız veya yeniden ölçüm yapmanız istenmiyor.
+
+## D. Başlangıç hazırlığı
+
+Aşağıdaki sorulara gerçek durumunuzu yazın. Hazır olmamak tek başına ceza değildir; amaç ihtiyaçları saptamaktır.
+
+| Kontrol | Durum |
+|---|---|
+| Public GitHub repo/proje kartları incelendi mi? | Evet / Henüz değil |
+| İki öğrenci Git/GitHub kullanabiliyor mu? | Evet / Kısmen / Hayır |
+| ns-3 için uygun bilgisayar veya laboratuvar ortamı belirlendi mi? | Evet / Desteğe ihtiyaç var |
+| İletişim ve ortak çalışma düzeni belirlendi mi? | Evet / Henüz değil |
+
+**Varsa kurulum/OS/erişim sorununuz (isteğe bağlı):**
+
+..................................................................................
+
+## E. Başlangıçtaki iki görev
+
+Henüz nihai iş bölümü istenmiyor; ilk iki görevi takip edecek kişiyi seçin.
+
+| İlk adım | Öğrenci 1 / Öğrenci 2 / Birlikte |
+|---|---|
+| Eski L-grup veri kaynağını öğrenmek | |
+| Atanacak Pxx konusunu ve starter kodu incelemek | |
+
+## F. Kural kabulü ve teslim
+
+- [ ] Public starter repo ile diğer grupların private çözümlerinin farklı olduğunu biliyoruz.
+- [ ] Önemli AI/LLM kullanımını `AI_USAGE.md` içinde açıklayıp çıktıları doğrulayacağız.
+- [ ] Projenin araştırma sorusu, faktörler, sabit koşullar, metrikler ve matrix'inin hazır verildiğini; bunları bu formda tekrar oluşturmamız gerekmediğini biliyoruz.
+
+**Formu birlikte dolduran iki öğrenci:** __________________ / __________________
+
+**Sonraki adım:** 6. haftada Pxx ataması ve `class_calibration_v1` yayımlanır; 7. haftada teknik öngörü ve P0/P1 baseline kontrolü yapılır.
+
+**Public repo:** https://github.com/ifs5/btu-wireless-calibrated-ns3
