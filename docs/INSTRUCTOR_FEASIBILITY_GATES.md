@@ -4,6 +4,9 @@ Bu sayfa **öğrenci çözümü içermez**; yalnız eğitmenin hazır etmesi ve 
 
 ## K0 · Güvenilir ortak altyapı
 
+**2026-10-18 ara durum:** Python runner'ın dry-run / output koruma / sahte kalibrasyon reddi / açık overwrite denetimleri **12 yerel fake-ns3 testi** ile geçti. Bu, gerçek ns-3.48 compile/smoke-test değildir. Kod ve test: `scripts/run_matrix.py`, `tests/test_run_matrix_safety.py`; süreç: [RUNNER_KULLANIMI.md](RUNNER_KULLANIMI.md).
+
+
 - [ ] `run_matrix.py --dry-run` hiçbir sonuç dosyasını silmiyor; mevcut sürümde tehlikeli silme davranışı var.
 - [ ] Gerçek çalıştırmada overwrite/resume kararı açık; sonuçların sessizce silinmesi mümkün değil.
 - [ ] Sentetik `calibrated-channel.json` ile gerçek core çalışma fail-closed engelleniyor; `class_calibration_v1` için sürüm/kaynak kaydı var.
