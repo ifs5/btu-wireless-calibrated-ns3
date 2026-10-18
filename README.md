@@ -89,6 +89,14 @@ python3 scripts/aggregate_results.py results/P01_raw.csv --output results/P01_su
 
 Önemli modelleme kuralı: Week 3'te fit edilen RSSI intercept `A`, ns-3 `ReferenceLoss` ile aynı şey değildir. Core workflow'da `ReferenceLoss`, ilgili frekans için 1 m Friis loss olarak hesaplanır; ölçümden doğrudan aktardığımız temel parametre `n` değeridir.
 
+## Projede öğrencinin geliştireceği kod
+
+Eğitmen, **projelerin hazır çözümünü** değil, doğru çalıştığı doğrulanmış minimum başlangıç ağını ve deney matrisini sağlar. Her proje grubunun kendi C++/Python katkısı, otomatik testi, grafiği ve yorumu olacaktır. Sadece matris çalıştırmak yeterli değildir.
+
+**[16 projenin ayrı öğrenci görevleri ve kabul ölçütleri](docs/STUDENT_WORK_CONTRACTS.md)** · **[Eğitmenin minimum starter / doğrulama kapıları](docs/INSTRUCTOR_FEASIBILITY_GATES.md)**
+
+P03/P12/P14/P15'te özel starter ve common ns-3.48 çalışma doğrulaması **henüz tamamlanmadı**; bu aşamada öğrenci çözümleri repoya eklenmedi.
+
 ## Starter kapsamı
 
 Ortak `ns3/btu-calibrated-wifi.cc` motoru şu projelerin temel starter'ıdır:

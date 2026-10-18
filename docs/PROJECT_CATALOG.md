@@ -24,3 +24,7 @@ Tüm projeler en az **P0 textbook** ve **P1 class-calibrated** propagation durum
 Sınıf genelindeki toplam core simulation bütçesi: **620 run**.
 
 Ayrıntılı research question, factor/values, metric, optional extension ve yayın katkısı bilgileri `project_catalog.csv`, `project_catalog.json` ve her `projects/Pxx/README.md` dosyasında bulunur.
+
+## Öğrenci kod geliştirme görevleri
+
+Her Pxx için eğitmen minimum baseline'ı, öğrencinin geliştireceği işlev ve somut kabul testleri [STUDENT_WORK_CONTRACTS.md](STUDENT_WORK_CONTRACTS.md) belgesinde bulunur. Bu bir hazır çözüm değildir.
