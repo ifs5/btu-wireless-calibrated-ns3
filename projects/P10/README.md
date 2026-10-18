@@ -33,3 +33,7 @@ Near ve edge-of-coverage mesafelerinde tekrar edin.
 Bandwidth/channel-quality etkileşimi.
 
 Core experiment matrix için `matrix.json` dosyasını kullanın. Core matrix üzerinde onaysız değişiklik yapmayın.
+
+## Öğrencinin geliştireceği işler
+
+Atanan projede hazır verilecek minimum kod, sizin geliştirmeniz gereken işlev ve değerlendirmede aranacak testler için **[STUDENT_TASKS.md](STUDENT_TASKS.md)** dosyasını okuyun. Yalnız mevcut matrix'i çalıştırmak proje için yeterli değildir.
