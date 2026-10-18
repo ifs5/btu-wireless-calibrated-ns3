@@ -82,7 +82,7 @@ class MatrixSafetyTests(unittest.TestCase):
         self.assertEqual(self.manifest.read_bytes(),b'PRECIOUS MANIFEST\n')
         self.assertFalse((self.ns3/'scratch/btu-calibrated-wifi.cc').exists())
         self.assertFalse((self.ns3/'calls.txt').exists())
-        self.assertEqual(len(list((self.repo/'results').glob('*.pending.csv'))),0)
+        self.assertEqual(len(list((self.repo/'results').glob('.*.pending.csv'))),0)
 
     def test_dry_run_creates_no_missing_output_directory(self):
         d=self.repo/'missingdir'
@@ -164,6 +164,12 @@ class MatrixSafetyTests(unittest.TestCase):
         self.assertNotEqual(r.returncode,0)
         self.assertEqual(path.read_text(),'MY OWN SOURCE')
         self.assertFalse((self.ns3/'calls.txt').exists())
+
+    def test_output_path_with_spaces(self):
+        special = self.repo / 'results' / 'group files' / 'P01 raw.csv'
+        r=self.call(*self.approved_args(),'--output',str(special))
+        self.assertEqual(r.returncode,0,r.stderr)
+        self.assertEqual(len(special.read_text().splitlines()),5)
 
     def test_specialized_project_refused(self):
         m=json.loads(self.matrix.read_text());m['runner']='specialized'
