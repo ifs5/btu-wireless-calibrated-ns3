@@ -166,7 +166,7 @@ class MatrixSafetyTests(unittest.TestCase):
         self.assertFalse((self.ns3/'calls.txt').exists())
 
     def test_output_path_with_spaces(self):
-        special = self.repo / 'results' / 'group files' / 'P01 raw.csv'
+        special = self.repo / 'results' / 'ölçüm grubu' / 'P01 sonuç.csv'
         r=self.call(*self.approved_args(),'--output',str(special))
         self.assertEqual(r.returncode,0,r.stderr)
         self.assertEqual(len(special.read_text().splitlines()),5)
