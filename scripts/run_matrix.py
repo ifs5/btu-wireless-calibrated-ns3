@@ -14,6 +14,7 @@ import json
 import math
 import os
 import re
+import shlex
 import shutil
 import subprocess
 import sys
@@ -140,7 +141,7 @@ def plan_runs(matrix: dict, cal: dict, output: Path) -> list[tuple[tuple[str, st
         for run in runs:
             args = dict(merged)
             args.update({"projectId": project, "scenarioId": scenario, "run": run, "outputCsv": str(output)})
-            argstr = " ".join(f"--{k}={cli_value(v)}" for k, v in args.items())
+            argstr = " ".join(shlex.quote(f"--{k}={cli_value(v)}") for k, v in args.items())
             key = (project, scenario, model, str(args.get("seed", 20261005)), str(run))
             plan.append((key, f"scratch/btu-calibrated-wifi {argstr}"))
     if len(set(scenarios)) != len(scenarios):
@@ -228,7 +229,7 @@ def main(argv=None) -> int:
     try:
         for i, (_, spec) in enumerate(plan, 1):
             # Plan içindeki outputCsv değerini yalnız stage path ile değiştir.
-            command = spec.replace(f"--outputCsv={output}", f"--outputCsv={stage}")
+            command = spec.replace(shlex.quote(f"--outputCsv={output}"), shlex.quote(f"--outputCsv={stage}"))
             print(f"[{i}/{len(plan)}] {command}", flush=True)
             subprocess.run(["./ns3", "run", command, "--no-build"], cwd=ns3, check=True)
         verify_staged_results(stage, {key for key, _ in plan})
