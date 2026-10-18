@@ -74,10 +74,11 @@ python3 scripts/run_matrix.py \
   --matrix projects/P01/matrix.json \
   --dry-run
 
-# 2) Core run'ları çalıştır
+# 2) Yalnız öğretmen onaylı calibration + starter release sonrasında
 python3 scripts/run_matrix.py \
   --ns3-root /path/to/ns-3.48 \
-  --matrix projects/P01/matrix.json
+  --matrix projects/P01/matrix.json \
+  --calibration calibration/outputs/class_calibration_v1.json
 
 # 3) Raw sonucu doğrula
 python3 scripts/validate_results.py results/P01_raw.csv
@@ -87,11 +88,13 @@ python3 scripts/aggregate_results.py results/P01_raw.csv \
   --output results/P01_summary.csv
 ```
 
+**Önemli:** Gerçek core çalışması için `calibration/APPROVED_CORE_CALIBRATION.json` eğitmen SHA-256 kilidi gerekir. Bu dosya henüz yayımlanmadı; demo dosyasından bilimsel sonuç üretilemez. Mevcut CSV korumalıdır; yalnız bilinçli `--overwrite` ile tam yeni çalışma sonrası değiştirilir. `--resume` yoktur. Ayrıntı: [RUNNER_KULLANIMI.md](RUNNER_KULLANIMI.md).
+
 ## 7. Commit ve evidence
 
 - Tek bir final commit yerine proje boyunca düzenli, anlamlı commit'ler yapın.
 - Commit sayısı not değildir; history yalnız development evidence olarak kullanılır.
-- Raw CSV dosyalarını sonradan elle değiştirmeyin.
+- Raw CSV dosyalarını sonradan elle değiştirmeyin. Public starter `.gitignore` içinde `results/*.csv` dosyalarını yoksayar; private repo'da raw veri takip edilecekse `git add -f` veya uygun ayrı private klasör kullanın.
 - Figure üretme script/notebook'unu saklayın.
 - Her önemli AI kullanımını `AI_USAGE.md` içinde kaydedin.
 
