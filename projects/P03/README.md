@@ -35,3 +35,7 @@ RTS/CTS sonucunun channel calibration’a karşı robustness’u.
 Core experiment matrix için `matrix.json` dosyasını kullanın. Core matrix üzerinde onaysız değişiklik yapmayın.
 
 > Bu specialized matrix bir deney spesifikasyonudur; common single-AP runner tarafından bilerek çalıştırılmaz.
+
+## Öğrencinin geliştireceği işler
+
+Atanan projede hazır verilecek minimum kod, sizin geliştirmeniz gereken işlev ve değerlendirmede aranacak testler için **[STUDENT_TASKS.md](STUDENT_TASKS.md)** dosyasını okuyun. Yalnız mevcut matrix'i çalıştırmak proje için yeterli değildir.
