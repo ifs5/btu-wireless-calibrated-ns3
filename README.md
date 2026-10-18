@@ -114,7 +114,7 @@ Bu **public instructor repository** şunları içerir:
 ## Öğrenci belgeleri
 
 - Proje şartnamesi: [`docs/PROJECT_SPEC.md`](docs/PROJECT_SPEC.md)
-- Proposal şablonu: [`docs/PROPOSAL_TEMPLATE.md`](docs/PROPOSAL_TEMPLATE.md)
+- Proje Tercih ve Hazırlık Formu (v3.0): [`docs/PROPOSAL_TEMPLATE.md`](docs/PROPOSAL_TEMPLATE.md)
 - AI/LLM politikası: [`docs/AI_POLICY.md`](docs/AI_POLICY.md)
 - Repo kullanım kılavuzu: [`docs/REPO_KULLANIMI.md`](docs/REPO_KULLANIMI.md)
 
