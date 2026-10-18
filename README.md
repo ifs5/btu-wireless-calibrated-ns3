@@ -8,6 +8,17 @@ Temel yaklaşımımız:
 
 Tüm gruplar aynı ölçüm-temelli propagation baseline'ını, aynı seed/run politikasını ve ortak sonuç şemasını kullanır; fakat farklı network-level araştırma sorularını inceler. Böylece projeler ayrı olsa da dönem sonunda sonuçlar birleştirilebilir ve seçilen senaryolar yayın kalitesinde tekrar çalıştırılabilir.
 
+## Önemli sınıf bilgisi ve kalibrasyon kararı (2026–2027)
+
+- 30 öğrenci varsa **15 ikili proje grubu**; kesin kayıt 32 olursa **16 ikili proje grubu** oluşur. **16 farklı proje konusu** bir havuzdur; 30 öğrencilik sınıfta bir konu atanmamış kalabilir.
+- Daha önceki **6 adet 5 kişilik laboratuvar grubu (L01–L06)** bağımsız ölçüm birimleridir; çiftlere ayrıldıklarında 15 ya da 16 bağımsız ölçüm sayılmazlar.
+- Kalibrasyonun ilk kaynağı **3. hafta LOS RSSI(dBm)-mesafe ham ölçümleridir**. İlk hafta Wi-Fi keşif lab'ı n hesabında kullanılmaz.
+- Aynı AP/BSSID, bant, LOS rota ve yeterli tekrar koşullarına sahip **en az 4 eski lab grubu** geçerliyse bu verilerden tek bir sınıf kalibrasyonu hesaplanır. Aksi durumda eski L01–L06 ekipleri 5. hafta aynı 5 GHz AP, rota, cihaz ve ölçüm yöntemiyle 1/2/4/8/12 m noktalarında üçer tekrar alır; yeni kampanya tek başına kalibrasyon kaynağı olur.
+- Her geçerli eski laboratuvar grubu için bir `n` tahmini yapılır. **P1 = bu n değerlerinin medyanı**, **P2 = Q1 (%25 çeyrek)**, **P3 = Q3 (%75 çeyrek)**. Çeyrek hesabında `QUARTILE.INC` yöntemi kullanılır. P0'ın n değeri sabit 2'dir.
+- **P05'te P0/P1/P2/P3 zorunlu core'dur; diğer projelerde P0/P1 core, P2/P3 çoğunlukla optional/sensitivity'dir.**
+- `calibration/outputs/calibrated-channel.json` içindeki mevcut sayılar **SENTETİK ÖRNEKTİR**, 2026 sınıfının ölçümleri değildir. Eğitmen **6. haftada class_calibration_v1** kaynağını/sürümünü yayımlamadan ve ns-3.48 starter compile/smoke-test onayı vermeden gerçek core campaign başlamamalıdır.
+- Yeni açıklamalı öğrenci Word belgeleri ve Excel matrisi v2.0, konu/kalibrasyon/notlandırma açısından öncelikli kaynaktır.
+
 ## Hedef ortam
 
 - **ns-3.48**
