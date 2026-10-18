@@ -1,6 +1,6 @@
 # Proje Kataloğu
 
-Tüm projeler en az **P0 textbook** ve **P1 class-calibrated** propagation durumlarını karşılaştırır. Core run bütçeleri gerekli tekrarları içerir.
+Tüm projeler en az **P0 textbook** ve **P1 class-calibrated** propagation durumlarını karşılaştırır. **P05'te P2 (Q1) ve P3 (Q3) de zorunlu core koşuldur.** Sınıf 30 öğrenci ise 15 ikili grup, 16 projeden 15'ini alır. Core run bütçeleri gerekli tekrarları içerir.
 
 | ID | Proje | Seviye | Core run | Starter |
 |---|---|---|---:|---|
