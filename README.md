@@ -71,7 +71,7 @@ python3 scripts/run_matrix.py \
   --dry-run
 ```
 
-Komutlar beklediğiniz gibiyse `--dry-run` seçeneğini kaldırarak deney matrisini çalıştırın.
+Komutlar beklediğiniz gibi olsa bile **henüz doğrudan gerçek deney başlatmayın**. Gerçek koşu için eğitmenin onayladığı `class_calibration_v1.json` ve SHA-256 kilidi gerekir; sentetik demo dosyası reddedilir. Ayrıntı: [`docs/RUNNER_KULLANIMI.md`](docs/RUNNER_KULLANIMI.md).
 
 ### 5. Sonuçları doğrulayın ve özetleyin
 
@@ -118,6 +118,10 @@ Bu **public instructor repository** şunları içerir:
 - dönem sonunda anonimleştirilmiş/agregat research artifacts.
 
 Öğrenci grupları geliştirmelerini **grading tamamlanana kadar private repository** üzerinde yapmalıdır. Public repodan starter sürümü alınır; öğrenci repo'sunda kendi kodu, `AI_USAGE.md`, raw results ve analysis dosyaları tutulur. Ayrıntılı akış: [`docs/REPO_KULLANIMI.md`](docs/REPO_KULLANIMI.md).
+
+## Çalıştırma güvenliği
+
+Runner artık dry-run sırasında **hiçbir sonuç dosyasını silmez**. Gerçek koşuda `--calibration` ile eğitmenin onayladığı dosya açıkça verilmelidir; mevcut CSV üzerine izinsiz yazılmaz ve tamamlama SHA-256 manifest'i oluşturulur. **12 taklit ns-3 testi geçti; gerçek ns-3.48 derleme/smoke-test henüz yapılmadı.** [Güvenli runner kılavuzu](docs/RUNNER_KULLANIMI.md).
 
 ## Öğrenci belgeleri
 
